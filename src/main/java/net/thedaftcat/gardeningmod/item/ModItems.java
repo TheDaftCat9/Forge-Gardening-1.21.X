@@ -7,7 +7,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.thedaftcat.gardeningmod.GardeningMod;
-import net.thedaftcat.gardeningmod.block.ModBlocks;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -20,7 +19,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.MANGO)));
 
     public static final RegistryObject<Item> MANGO_SEED = ITEMS.register("mango_seed",
             () -> new Item(new Item.Properties()));
